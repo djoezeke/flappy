@@ -46,8 +46,10 @@ See the Xodex documentation for more advanced scene management and transitions.
 from xodex.scenes.manager import register
 from .gamscene import GameScene
 from .mainscene import MainScene
+from .overscene import OverScene
 
 # Register your flappy Scenes here.
 
 register(MainScene, name="MainScene")
 register(GameScene, name="GameScene")
+register(OverScene, name="OverScene")

@@ -12,3 +12,7 @@ class Floor(Image):
     def perform_draw(self, surface, *args, **kwargs):
         self._img_rect.x = -((-self._img_rect.x + self.vel_x) % self.x_extra)
         return super().perform_draw(surface, *args, **kwargs)
+
+    @property
+    def rect(self):
+        return self._img_rect
