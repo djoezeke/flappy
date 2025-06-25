@@ -17,7 +17,7 @@ PROJECT = "flappy"
 BASE_DIR = Path(__file__).resolve().parent.parent
 
 # --- Window & Display ---
-FPS = 60  # Target frames per second
+FPS = 30  # Target frames per second
 WIDTH = 288  # Window width in pixels
 HEIGHT = 512  # Window height in pixels
 WINDOW_SIZE = (WIDTH, HEIGHT)
@@ -36,7 +36,7 @@ PLAYER_START_POS = (100, 100)  # Default player spawn position (x, y)
 ENABLE_COLLISIONS = True  # Enable or disable collision detection
 
 # --- Debugging & Development ---
-DEBUG = True  # Enable debug mode (shows extra info, disables some optimizations)
+DEBUG = False  # Enable debug mode (shows extra info, disables some optimizations)
 SHOW_FPS = True  # Display FPS counter on screen
 SHOW_OBJECT_COUNT = True  # Display number of active objects
 LOG_LEVEL = "INFO"  # Options: "DEBUG", "INFO", "WARNING", "ERROR"

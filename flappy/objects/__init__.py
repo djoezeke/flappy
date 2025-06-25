@@ -50,10 +50,12 @@ from xodex.objects.manager import register
 from .background import Background
 from .flappy import Flappy, Bird
 from .floor import Floor
+from .score import Score
 from .pipes import Pipes
 
 register(Background, name="Background")
 register(Flappy, name="Flappy")
 register(Floor, name="Floor")
+register(Score, name="Score")
 register(Pipes, name="Pipes")
 register(Bird, name="Bird")

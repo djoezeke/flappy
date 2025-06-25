@@ -4,33 +4,26 @@ from xodex.scenes import BlurScene, SceneManager
 
 
 class OverScene(BlurScene):
-    def __init__(
-        self,
-        blur_surface,
-        *args,
-        blur_count=5,
-        blur_duration=3,
-        on_blur_complete=None,
-        **kwargs
-    ):
+    def __init__(self, blur_surface, score, **kwargs):
         super().__init__(
-            blur_surface,
-            *args,
-            blur_count=blur_count,
-            blur_duration=blur_duration,
-            on_blur_complete=on_blur_complete,
-            **kwargs
+            blur_surface, blur_count=2, blur_duration=3, on_blur_complete=None, **kwargs
         )
+        self.score = score
 
     def _generate_objects_(self):
         Image = self.object.Image
+        Score = self.object.Score
+
+        score = Score(self.width, self.height)
+        score.set(self.score)
 
         message = Image(
             "assets/images/gameover.png",
-            (int((self.width - 184) // 2), int(self.height * 0.12)),
+            (int((self.width - 184) // 2), int(self.height * 0.5)),
         )
 
         yield message
+        yield score
 
     def handle_scene(self, event: Event, *args, **kwargs) -> None:
         """

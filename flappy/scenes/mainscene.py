@@ -20,9 +20,9 @@ class MainScene(Scene):
         )
 
         yield Background()
-        yield Floor()
+        yield Floor(self.width)
         yield Bird(120, 120)
-        yield Flappy(120, int(self.height * 0.65), None, None)
+        yield Flappy(self.width, self.height)
         yield message
 
     def handle_scene(self, event: Event, *args, **kwargs) -> None:
