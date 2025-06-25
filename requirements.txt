@@ -1,0 +1,3 @@
+pygame>=2.6.1
+xodex>=25.6.15
+pygameui>=25.6.15
