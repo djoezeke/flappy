@@ -1,6 +1,6 @@
 import pygame
 from pygame.event import Event
-from xodex.scenes import BlurScene, SceneManager
+from xodex.scenes import BlurScene
 
 
 class OverScene(BlurScene):
@@ -38,8 +38,8 @@ class OverScene(BlurScene):
 
     def gotomain(self):
         """gotomain"""
-        pygame.mixer.Sound("assets/sounds/wing.wav").play()
-        SceneManager().reset("MainScene")
+        self.sounds.play("wing")
+        self.manager.reset("MainScene")
 
     def on_first_enter(self, *args, **kwargs):
-        pygame.mixer.Sound("assets/sounds/swoosh.wav").play()
+        self.sounds.play("swoosh")

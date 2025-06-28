@@ -4,10 +4,10 @@
 </code></em>
 </p>
 <p align="center">
-	<img src="https://img.shields.io/github/license/username/flappy?style=default&logo=opensourceinitiative&logoColor=white&color=0080ff" alt="license">
-	<img src="https://img.shields.io/github/last-commit/username/flappy?style=default&logo=git&logoColor=white&color=0080ff" alt="last-commit">
-	<img src="https://img.shields.io/github/languages/top/username/flappy?style=default&color=0080ff" alt="repo-top-language">
-	<img src="https://img.shields.io/github/languages/count/username/flappy?style=default&color=0080ff" alt="repo-language-count">
+	<img src="https://img.shields.io/github/license/djoezeke/flappy?style=default&logo=opensourceinitiative&logoColor=white&color=0080ff" alt="license">
+	<img src="https://img.shields.io/github/last-commit/djoezeke/flappy?style=default&logo=git&logoColor=white&color=0080ff" alt="last-commit">
+	<img src="https://img.shields.io/github/languages/top/djoezeke/flappy?style=default&color=0080ff" alt="repo-top-language">
+	<img src="https://img.shields.io/github/languages/count/djoezeke/flappy?style=default&color=0080ff" alt="repo-language-count">
 </p>
 
 <details><summary>Table of Contents</summary>
@@ -30,7 +30,9 @@
 
 ## 📍 Overview
 
-This project is built using Xodex.
+A Flappy Bird Clone.
+
+>This project is built using Xodex.
 
 
 ### 🚀 Features
@@ -46,17 +48,15 @@ This project is built using Xodex.
 The objective is to place the tetrominoes to create complete lines, which will then be cleared from the board.
 The game ends when the Tetris playfield is filled.
 
-- Use the arrow keys to control basic controls.
+- Use the space keys to control basic controls.
 - The game features a main menu where you can start the game or exit.
 - You can pause the game by pressing the designated pause key (to be defined in settings).
 
 ### 🕹️ Controls
 
-- **A** / **Left Arrow** : Move Left
-- **D** / **Right Arrow** : Move Right
-- **S** / **Down Arrow** : Move Down
-- **W** / **Up Arrow** : Move Up
-- **Space** : Pause/Resume Game
+- **Space**: Flap
+- **Mouse Click**: Flap
+- **Escape** : Pause/Resume Game
 
 
 ## 📁 Project Structure
@@ -96,7 +96,7 @@ To run the flappy game, follow these steps:
 
 1. **Clone the repository**:
 ```sh
-   git clone <repository-url>
+   git clone https://github.com/djoezeke/flappy
    cd flappy
 ```
 
@@ -111,6 +111,10 @@ To run the flappy game, follow these steps:
    Execute the following command:
 ```sh
    python manage.py run
+```
+or:
+```sh
+   python -m flappy
 ```
 
 4. **Building the game**:
@@ -128,9 +132,9 @@ After building the game, you can distribute the executable found in the `dist` f
 
 Feel free to submit issues or pull requests if you have suggestions or improvements for the game.
 
-- **💬 [Join the Discussions](https://github.com/username/flappy/discussions)**: Share your insights, provide feedback, or ask questions.
-- **🐛 [Report Issues](https://github.com/username/flappy/issues)**: Submit bugs found or log feature requests for the `flappy` project.
-- **💡 [Submit Pull Requests](https://github.com/username/flappy/blob/main/CONTRIBUTING.md)**: Review open PRs, and submit your own PRs.
+- **💬 [Join the Discussions](https://github.com/djoezeke/flappy/discussions)**: Share your insights, provide feedback, or ask questions.
+- **🐛 [Report Issues](https://github.com/djoezeke/flappy/issues)**: Submit bugs found or log feature requests for the `flappy` project.
+- **💡 [Submit Pull Requests](https://github.com/djoezeke/flappy/blob/main/CONTRIBUTING.md)**: Review open PRs, and submit your own PRs.
 
 <details closed>
 <summary>Contributing Guidelines</summary>
@@ -138,7 +142,7 @@ Feel free to submit issues or pull requests if you have suggestions or improveme
 1. **Fork the Repository**: Start by forking the project repository to your github account.
 2. **Clone Locally**: Clone the forked repository to your local machine using a git client.
    ```sh
-   git clone --recursive https://github.com/username/flappy
+   git clone --recursive https://github.com/djoezeke/flappy
    ```
 3. **Create a New Branch**: Always work on a new branch, giving it a descriptive name.
    ```sh
@@ -161,8 +165,8 @@ Feel free to submit issues or pull requests if you have suggestions or improveme
 <summary>Contributor Graph</summary>
 <br>
 <p align="left">
-   <a href="https://github.com{/username/flappy/}graphs/contributors">
-      <img src="https://contrib.rocks/image?repo=username/flappy">
+   <a href="https://github.com{/djoezeke/flappy/}graphs/contributors">
+      <img src="https://contrib.rocks/image?repo=djoezeke/flappy">
    </a>
 </p>
 </details>

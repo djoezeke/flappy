@@ -1,15 +1,17 @@
 import pygame
 from pygame.event import Event
-from xodex.scenes import Scene, SceneManager
+from xodex.scenes import Scene
 
 
 class GameScene(Scene):
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
+
         Pipes = self.object.Pipes
         Floor = self.object.Floor
         Score = self.object.Score
         Flappy = self.object.Flappy
+
         self.floor = Floor(self.width)
         self.score = Score(self.width, self.height)
         self.pipes = Pipes(self.width, self.height)
@@ -28,8 +30,8 @@ class GameScene(Scene):
 
     def gameover(self):
         """entergame"""
-        pygame.mixer.Sound("assets/sounds/die.wav").play()
-        SceneManager().append("OverScene", self.screen, self.score.score)
+        self.sounds.play("die")
+        self.manager.append("OverScene", self.screen, self.score.score)
 
     def is_tap_event(self, event) -> bool:
         """
@@ -70,7 +72,7 @@ class GameScene(Scene):
         if self.flappy.collided(self.floor, self.pipes):
             self.gameover()
 
-        for i, pipe in enumerate(self.pipes.upper):
+        for _, pipe in enumerate(self.pipes.upper):
             if self.flappy.crossed(pipe):
                 self.score.add()
         super().update_scene(deltatime, *args, **kwargs)

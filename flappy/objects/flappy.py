@@ -1,7 +1,10 @@
 import random
-from enum import IntEnum, auto
+from enum import IntEnum
+
 import pygame
 from pygame.event import Event
+
+from xodex.game.sounds import Sounds
 from xodex.objects.animator import Animator
 from xodex.objects.objects import DrawableObject, EventfulObject, LogicalObject
 
@@ -90,13 +93,13 @@ class Flappy(DrawableObject, EventfulObject, LogicalObject):
         self.mode = mode
         if mode == PlayerMode.NORMAL:
             self.reset_vals_normal()
-            pygame.mixer.Sound("assets/sounds/wing.wav").play()
+            Sounds().play("wing")
         elif mode == PlayerMode.SHM:
             self.reset_vals_shm()
         elif mode == PlayerMode.CRASH:
-            pygame.mixer.Sound("assets/sounds/hit.wav").play()
+            Sounds().play("hit")
             if self.crash_entity == "pipe":
-                pygame.mixer.Sound("assets/sounds/die.wav").play()
+                Sounds().play("die")
             self.reset_vals_crash()
 
     def reset_vals_crash(self) -> None:
@@ -145,7 +148,7 @@ class Flappy(DrawableObject, EventfulObject, LogicalObject):
             self.flapped = True
             # Instantly rotate up on flap
             self.rot = self.rot_max
-            pygame.mixer.Sound("assets/sounds/wing.wav").play()
+            Sounds().play("wing")
 
     def tick_normal(self) -> None:
         """Update position and rotation for normal gameplay mode."""

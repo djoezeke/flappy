@@ -1,6 +1,6 @@
 import pygame
 from pygame.event import Event
-from xodex.scenes import Scene, SceneManager
+from xodex.scenes import Scene
 
 
 class MainScene(Scene):
@@ -38,5 +38,5 @@ class MainScene(Scene):
 
     def entergame(self):
         """entergame"""
-        pygame.mixer.Sound("assets/sounds/wing.wav").play()
-        SceneManager().reset("GameScene")
+        self.sounds.play("wing")
+        self.manager.reset("GameScene")

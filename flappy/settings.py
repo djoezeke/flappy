@@ -51,7 +51,7 @@ USE_TZ = True  # Enable timezone-aware datetimes
 SUPPORTED_LANGUAGES = ["en-us", "es", "fr", "de"]  # List of supported languages
 
 # --- Assets ---
-ASSET_DIR = "asset/"  # Root directory for all assets
+ASSET_DIR = "assets/"  # Root directory for all assets
 IMAGE_DIR = ASSET_DIR + "images/"  # Directory for images
 SOUND_DIR = ASSET_DIR + "sounds/"  # Directory for sounds
 FONT_DIR = ASSET_DIR + "fonts/"  # Directory for fonts
